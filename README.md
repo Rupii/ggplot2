@@ -44,7 +44,7 @@ devtools::install_github("tidyverse/ggplot2")
 It's hard to succinctly describe how ggplot2 works because it embodies a deep philosophy of visualisation. However, in most cases you start with `ggplot()`, supply a dataset and aesthetic mapping (with `aes()`). You then add on layers (like `geom_point()` or `geom_histogram()`), scales (like `scale_colour_brewer()`), faceting specifications (like `facet_wrap()`) and coordinate systems (like `coord_flip()`).
 
 
-![Scatter Plots](./images/CombinedPlots.png)
+![Scatter Plots](https://raw.githubusercontent.com/nilesh-patil/Intro-To-ggplot2/master/images/CombinedPlots.png)
 
 
 As well as the components built-in to ggplot2, there are many packages that provide extensions. See a comprehensive list at <http://www.ggplot2-exts.org>.
