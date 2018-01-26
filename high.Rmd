@@ -1,0 +1,57 @@
+---
+title: "Higl level view of what R can do"
+author: "Rupesh"
+date: "26 January 2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Here is a over view of how advanced vizualization can be done so simply using R
+```{r}
+library(ggplot2)
+# loading the dependency
+df <- read.csv("Mispriced-Diamonds.csv")
+#loading the datasets
+head(df)
+```
+now so you know what is there in data you can vizualize it using ggplot2
+
+```{r}
+p <- ggplot(df, aes(x = carat, y = price))
+# loading the data layer and aestics layer
+p + geom_point() -> q
+# setting the geometry 
+print(q)
+```
+above is the scatterplot for the data you can add colour and make it look clean
+```{r}
+p + geom_point(alpha = 0.2, aes(colour = clarity))
+```
+know that we have added colour to the data lets remove the oulires that are breaking the treand
+```{r}
+# for that we need to load the data once again to plot
+p <- ggplot(df[df$carat < 3, ], aes(x = carat, y = price, colour = clarity))
+print(p + geom_point(alpha = 0.1))
+```
+
+know we see the trend in our data lets fit some stats thow the data
+```{r}
+print(p + geom_point(alpha = 0.1) + geom_smooth())
+```
+
+so you can see that brown is the best clarity for a diamond over given price 
+
+you can tell all the story using this simple vizualization without utterning a word
+
+that how you can prdouce advanced plots with so simple code
+
+
+
+thank you !
+for more content on R visit <a href = "http://rpubs.com/Rupesh110" > Rupesh </a>
+
+for more follow in my blog rupi.ml
