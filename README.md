@@ -1,5 +1,5 @@
 
-ggplot2 <img src="man/figures/logo.png" align="right" />
+ggplot2 
 ========================================================
 ![ggplot](http://hexb.in/hexagons/ggplot2.png)
 Overview
@@ -28,6 +28,6 @@ even the advanced graph can be done by just adding few layer of  grammer
 ```{r}
 p <- ggplot(df[df$carat < 3, ], aes(x = carat, y = price, colour = clarity))
 # loading data and adding the layers over it
-print(p + geom_point(alpha = 0.1) + geom_smooth() + )
+print(p + geom_point(alpha = 0.1) + geom_smooth() + ggtitle("Rupi"))
 ```
 ![](https://raw.githubusercontent.com/Rupii/ggplot2/master/Rplot.png)
